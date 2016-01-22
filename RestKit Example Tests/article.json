@@ -1,0 +1,9 @@
+{
+    "articleID": "123",
+    "title": "RestKit Object Mapping Example",
+    "author": 
+    {
+        "authorID" : "234",
+        "name": "Blake Watters",
+    }
+}

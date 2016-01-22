@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uRC-CF-XQV">
+                                <rect key="frame" x="253" y="34" width="95" height="30"/>
+                                <state key="normal" title="Mapp Articles"/>
+                                <connections>
+                                    <action selector="mappArticles:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jVY-au-NzV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFw-9Y-xCR">
+                                <rect key="frame" x="180" y="110" width="242" height="30"/>
+                                <state key="normal" title="Mapp Objects With ObjectManager"/>
+                                <connections>
+                                    <action selector="mappObjectsWithObjectManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b0u-qu-bYA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YLw-LP-jYY">
+                                <rect key="frame" x="217" y="148" width="169" height="30"/>
+                                <state key="normal" title="Serialize Object to JSON"/>
+                                <connections>
+                                    <action selector="serializeObjectToJson:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ees-wJ-UFE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52h-cS-roB">
+                                <rect key="frame" x="207" y="186" width="190" height="30"/>
+                                <state key="normal" title="Mapp Objects To Core Data"/>
+                                <connections>
+                                    <action selector="MappObjectsToCoreData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3WT-8o-ZCL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07T-Da-8cY">
+                                <rect key="frame" x="221" y="72" width="160" height="30"/>
+                                <state key="normal" title="Mapp Dynamic Objects"/>
+                                <connections>
+                                    <action selector="mappDynamicObjects:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q47-Iw-rhi"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uRC-CF-XQV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0ix-0l-8mX"/>
+                            <constraint firstItem="07T-Da-8cY" firstAttribute="centerX" secondItem="uRC-CF-XQV" secondAttribute="centerX" id="2Yg-0S-DwB"/>
+                            <constraint firstItem="YLw-LP-jYY" firstAttribute="centerX" secondItem="VFw-9Y-xCR" secondAttribute="centerX" id="5rd-zK-3Gq"/>
+                            <constraint firstItem="52h-cS-roB" firstAttribute="top" secondItem="YLw-LP-jYY" secondAttribute="bottom" constant="8" id="Aoa-Rb-kKF"/>
+                            <constraint firstItem="VFw-9Y-xCR" firstAttribute="top" secondItem="07T-Da-8cY" secondAttribute="bottom" constant="8" id="OBU-Cz-8kP"/>
+                            <constraint firstItem="07T-Da-8cY" firstAttribute="top" secondItem="uRC-CF-XQV" secondAttribute="bottom" constant="8" id="P73-Xz-lxQ"/>
+                            <constraint firstItem="52h-cS-roB" firstAttribute="centerX" secondItem="YLw-LP-jYY" secondAttribute="centerX" id="WmD-vv-p0M"/>
+                            <constraint firstItem="VFw-9Y-xCR" firstAttribute="centerX" secondItem="07T-Da-8cY" secondAttribute="centerX" id="ZHR-2H-xcO"/>
+                            <constraint firstItem="YLw-LP-jYY" firstAttribute="top" secondItem="VFw-9Y-xCR" secondAttribute="bottom" constant="8" id="hbb-v6-0wl"/>
+                            <constraint firstItem="uRC-CF-XQV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="14" id="yg0-cC-U5Q"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
