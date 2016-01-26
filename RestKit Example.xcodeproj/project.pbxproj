@@ -27,6 +27,7 @@
 		3F7E6ADE1C5132FF00D5E264 /* RestKit_Example_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E6ADD1C5132FF00D5E264 /* RestKit_Example_Tests.m */; };
 		3F7E6AE81C51383C00D5E264 /* article.json in Resources */ = {isa = PBXBuildFile; fileRef = 3F7E6AE71C51383C00D5E264 /* article.json */; };
 		3F7E6AEA1C52336500D5E264 /* RestKit_Example_CoreData_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7E6AE91C52336500D5E264 /* RestKit_Example_CoreData_Tests.m */; };
+		3FCEB3801C576B9600DA1B2A /* WebServerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FCEB37F1C576B9600DA1B2A /* WebServerManager.m */; };
 		7753CE556FF2DB9971414508 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7236E64A057B11A5371FF2F /* libPods.a */; };
 		8D7FBF42594874C95E701C2F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7236E64A057B11A5371FF2F /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,8 @@
 		3F7E6ADF1C5132FF00D5E264 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F7E6AE71C51383C00D5E264 /* article.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = article.json; sourceTree = "<group>"; };
 		3F7E6AE91C52336500D5E264 /* RestKit_Example_CoreData_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestKit_Example_CoreData_Tests.m; sourceTree = "<group>"; };
+		3FCEB37E1C576B9600DA1B2A /* WebServerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebServerManager.h; path = Managers/WebServerManager.h; sourceTree = "<group>"; };
+		3FCEB37F1C576B9600DA1B2A /* WebServerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebServerManager.m; path = Managers/WebServerManager.m; sourceTree = "<group>"; };
 		F7236E64A057B11A5371FF2F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -184,6 +187,7 @@
 		3F7D8BEB1C4F90A80001A6BA /* RestKit Example */ = {
 			isa = PBXGroup;
 			children = (
+				3FCEB37D1C576B6E00DA1B2A /* Managers */,
 				3F057A381C4FB08F004AE6DF /* CoreData Mapping */,
 				3F057A371C4FB083004AE6DF /* Object Mapping */,
 				3F7D8BEF1C4F90A80001A6BA /* AppDelegate.h */,
@@ -216,6 +220,15 @@
 				3F7E6AE71C51383C00D5E264 /* article.json */,
 			);
 			path = "RestKit Example Tests";
+			sourceTree = "<group>";
+		};
+		3FCEB37D1C576B6E00DA1B2A /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				3FCEB37E1C576B9600DA1B2A /* WebServerManager.h */,
+				3FCEB37F1C576B9600DA1B2A /* WebServerManager.m */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 		F533861BECAD3A782895B939 /* Pods */ = {
@@ -434,6 +447,7 @@
 				3F7D8BF11C4F90A80001A6BA /* AppDelegate.m in Sources */,
 				3F057A6A1C4FD192004AE6DF /* ArticleEntity+CoreDataProperties.m in Sources */,
 				3F057A4C1C4FBF37004AE6DF /* Model.xcdatamodeld in Sources */,
+				3FCEB3801C576B9600DA1B2A /* WebServerManager.m in Sources */,
 				3F057A421C4FB6A5004AE6DF /* AuthorObject.m in Sources */,
 				3F057A451C4FBF07004AE6DF /* CoreDataMapping.m in Sources */,
 				3F057A3F1C4FB104004AE6DF /* ObjectMapping.m in Sources */,

@@ -79,7 +79,10 @@
                                                                                statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]; // range of HTTP codes, if request gets different  code operation will fail.
 //  Configure URL request
     NSURL *url = [NSURL URLWithString:@"http://localhost:8080/article.json"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+//  Add token header for authorization
+    [request setValue:@"LQbFp6O9niW1MlMr76CKqNHeJbAjzmyRwk2mbbq0" forHTTPHeaderField:@"Token"];
     
 //  Configure mapping operation
     RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[descriptor]];
@@ -154,7 +157,10 @@
     
 //  Configure URL request
     NSURL *url = [NSURL URLWithString:@"http://localhost:8080/dynamicMapping.json"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+//  Add token header for authorization
+    [request setValue:@"LQbFp6O9niW1MlMr76CKqNHeJbAjzmyRwk2mbbq0" forHTTPHeaderField:@"Token"];
     
 //  Configure mapping operation
     RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[descriptor]];
@@ -186,6 +192,9 @@
 + (void)mappObjectsWithObjectManager
 {
     RKObjectManager *manager = [RKObjectManager managerWithBaseURL:[NSURL URLWithString:@"http://localhost:8080"]];
+    
+//  Add token header for authorization
+    [manager.HTTPClient setDefaultHeader:@"Token" value:@"LQbFp6O9niW1MlMr76CKqNHeJbAjzmyRwk2mbbq0"];
     
     RKObjectMapping *articleMapping = [[RKObjectMapping alloc] initWithClass:[ArticleObject class]];
     [articleMapping addAttributeMappingsFromDictionary:@{@"articleID" : @"articleID",

@@ -91,7 +91,10 @@
                                                                                statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)]; // range of HTTP codes, if request gets different  code operation will fail.
 //  Configure URL request
     NSURL *url = [NSURL URLWithString:@"http://localhost:8080/manyArticles.json"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+//  Add token header for authorization
+    [request setValue:@"LQbFp6O9niW1MlMr76CKqNHeJbAjzmyRwk2mbbq0" forHTTPHeaderField:@"Token"];
     
 //  Configure mapping operation
     RKManagedObjectRequestOperation *operation = [[RKManagedObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[descriptor]];
