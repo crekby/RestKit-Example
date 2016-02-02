@@ -71,6 +71,7 @@
 //  Mapping for relationship object
     RKEntityMapping *authorMapping = [RKEntityMapping mappingForEntityForName:@"AuthorEntity" inManagedObjectStore:managedObjectStore];
     [authorMapping addAttributeMappingsFromArray:@[@"authorID", @"name"]];
+    authorMapping.identificationAttributes = @[ @"authorID" ];
     
 //  add relationship to article mapping
 
