@@ -9,6 +9,7 @@
 #import "WebServerManager.h"
 #import "GCDWebServer.h"
 #import "GCDWebServerDataResponse.h"
+#import "GCDWebServerErrorResponse.h"
 
 @interface WebServerManager()
 
@@ -37,7 +38,7 @@
                                       
                                       NSString *token = [request.headers valueForKey:@"Token"];
                                       if (![strongSelf.currentOauthToken isEqualToString:token]) {
-                                          return [GCDWebServerDataResponse responseWithHTML:@"You not authorized"];
+                                          return [GCDWebServerErrorResponse responseWithClientError:kGCDWebServerHTTPStatusCode_Unauthorized message:@"unauthorized"];
                                       }
                                       
                                       NSString *path = request.path;
@@ -81,7 +82,7 @@
                                           return [GCDWebServerDataResponse responseWithJSONObject:[strongSelf articlesWithCount:100]];
                                       }
                                       
-                                      return [GCDWebServerDataResponse responseWithHTML:@"You send a wrong request"];
+                                      return [GCDWebServerErrorResponse responseWithClientError:kGCDWebServerHTTPStatusCode_NotFound message:@"Not Found"];
                                       
                                   }];
     
